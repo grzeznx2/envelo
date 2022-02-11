@@ -1,9 +1,9 @@
-type TValidator = {
+export type TValidator = {
   type: string
   errorMessage: string
 }
 
-type GetValidator = (errorMessage: string) => TValidator
+export type GetValidator = (errorMessage: string) => TValidator
 
 export default class Validator {
   static isPhone: GetValidator = (errorMessage: string) => ({ type: 'IS_PHONE', errorMessage })
