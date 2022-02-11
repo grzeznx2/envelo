@@ -105,6 +105,23 @@ body {
   box-shadow: var(--box-shadow-medium);
 }
 
+.form__fieldset-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.form__button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__error-container {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+
 .form-error {
   text-align: left;
 }
