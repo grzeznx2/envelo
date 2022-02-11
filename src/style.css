@@ -105,6 +105,17 @@ body {
   box-shadow: var(--box-shadow-medium);
 }
 
+.form-error {
+  text-align: left;
+}
+
+.form-error__message {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color--tertiary--3);
+}
+
 .spinner {
   margin: 0 auto;
   text-align: center;
