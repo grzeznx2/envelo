@@ -5,7 +5,7 @@ import FormError from './FormError'
 import { sleep } from '../utils'
 import { TValidator } from './Validator'
 
-type FieldsetArray = {
+export type FieldsetArray = {
   type: string
   labelText: string
   validators: TValidator[]
