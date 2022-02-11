@@ -11,8 +11,8 @@ export default abstract class Element<T extends HTMLElement> {
     this.parent = parent
   }
 
-  createElement(type: string, options: HTMLElementOptions): T {
-    const element = document.createElement(type) as T
+  createElement<U extends HTMLElement>(type: string, options: HTMLElementOptions): U {
+    const element = document.createElement(type) as U
 
     Object.keys(options).forEach(key => {
       if (key === 'innerHTML') {

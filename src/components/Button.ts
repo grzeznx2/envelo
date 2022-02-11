@@ -13,7 +13,10 @@ export default class Button extends Element<HTMLButtonElement> {
   }
 
   private _initialize(text: string, clickHandler: EventListener) {
-    this.element = this.createElement('button', { innerHTML: text, classList: ['button'] })
+    this.element = this.createElement<HTMLButtonElement>('button', {
+      innerHTML: text,
+      classList: ['button'],
+    })
     this.element.addEventListener('click', clickHandler)
     this.parent.appendChild(this.element)
   }

@@ -13,7 +13,7 @@ export default class Spinner extends Element<HTMLDivElement> {
   }
 
   _initialize() {
-    const spinner = this.createElement('div', { classList: ['spinner'] })
+    const spinner = this.createElement<HTMLDivElement>('div', { classList: ['spinner'] })
     spinner.insertAdjacentHTML('afterbegin', loader)
     this.element = spinner
     this.parent.appendChild(this.element)
