@@ -1,6 +1,7 @@
 type HTMLElementOptions = {
   innerHTML?: string
   classList?: string[]
+  maxLength?: number
 }
 
 export default abstract class Element<T extends HTMLElement> {
@@ -20,6 +21,8 @@ export default abstract class Element<T extends HTMLElement> {
       } else if (key === 'classList') {
         const { classList } = options
         classList!.forEach(className => element.classList.add(className))
+      } else if (key === 'maxLength') {
+        element.setAttribute('maxLength', `${options.maxLength!}`)
       }
     })
 

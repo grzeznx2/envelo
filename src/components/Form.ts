@@ -8,6 +8,7 @@ import { TValidator } from './Validator'
 export type FieldsetArray = {
   type: string
   labelText: string
+  maxLength: number
   validators: TValidator[]
 }[]
 
@@ -31,7 +32,6 @@ export default class Form extends Element<HTMLFormElement> {
   }
 
   _initialize(fieldsetArray: FieldsetArray) {
-    // if(!this.element || !this.submitButton) return
     this.element = this.createElement<HTMLFormElement>('form', { classList: ['form'] })
     const fieldsetContainer = this.createElement<HTMLDivElement>('div', {
       classList: ['form__fieldset-container'],
@@ -50,7 +50,8 @@ export default class Form extends Element<HTMLFormElement> {
           fieldset.labelText,
           fieldset.type,
           fieldset.validators,
-          () => this.checkValidity()
+          () => this.checkValidity(),
+          fieldset.maxLength
         )
       )
     })

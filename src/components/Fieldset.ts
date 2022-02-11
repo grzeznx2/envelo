@@ -15,7 +15,8 @@ export default class Fieldset extends Element<HTMLFieldSetElement> {
     labelText: string,
     type: string,
     validators: TValidator[],
-    onChangeCb: Function
+    onChangeCb: Function,
+    maxLength: number
   ) {
     super(parent)
     this.element = null
@@ -25,10 +26,10 @@ export default class Fieldset extends Element<HTMLFieldSetElement> {
     this.errors = []
     this.value = ''
     this.validators = validators
-    this._initialize(labelText)
+    this._initialize(labelText, maxLength)
   }
 
-  _initialize(labelText: string) {
+  _initialize(labelText: string, maxLength: number) {
     this.element = this.createElement<HTMLFieldSetElement>('fieldset', { classList: ['fieldset'] })
 
     const label = this.createElement<HTMLLabelElement>('label', {
@@ -38,6 +39,7 @@ export default class Fieldset extends Element<HTMLFieldSetElement> {
 
     const input = this.createElement('input', {
       classList: ['fieldset__input'],
+      maxLength,
     })
 
     input.addEventListener('input', e => {

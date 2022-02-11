@@ -3,7 +3,6 @@ import Element from './Element'
 import Form, { FieldsetArray } from './Form'
 import Modal from './Modal'
 import Timer from './Timer'
-import Validator from './Validator'
 
 export class Screen extends Element<HTMLDivElement> {
   element: HTMLDivElement | null
