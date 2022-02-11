@@ -204,6 +204,7 @@ body {
 }
 
 .spinner {
+  width: 15rem;
   margin: 0 auto;
   text-align: center;
 }
