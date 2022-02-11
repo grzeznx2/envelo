@@ -45,3 +45,23 @@ body {
   height: 100%;
   position: relative;
 }
+
+.spinner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spinner svg {
+  fill: white;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
