@@ -69,6 +69,42 @@ body {
   position: relative;
 }
 
+.fieldset {
+  width: 100%;
+  border: none;
+  padding: 0 3rem;
+}
+
+.fieldset__label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.fieldset__input {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.fieldset__input::-webkit-input-placeholder {
+  color: var(--color-grey-dark-2);
+}
+
+.fieldset__input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--color-primary-2);
+  box-shadow: var(--box-shadow-medium);
+}
+
 .spinner {
   margin: 0 auto;
   text-align: center;
